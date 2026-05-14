@@ -28,9 +28,9 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row justify-between items-center text-zinc-500 text-sm">
           <p>© {new Date().getFullYear()} Pasang. All rights reserved.</p>
           <div className="flex gap-6 mt-4 md:mt-0">
-            <a href="#" className="hover:text-white transition-colors duration-300">Twitter</a>
-            <a href="#" className="hover:text-white transition-colors duration-300">LinkedIn</a>
-            <a href="#" className="hover:text-white transition-colors duration-300">Github</a>
+            <a href="https://www.instagram.com/pasangt672/" className="hover:text-white transition-colors duration-300">Instagram</a>
+            <a href="https://www.linkedin.com/in/pasang-tamang-758869333/" className="hover:text-white transition-colors duration-300">LinkedIn</a>
+            <a href="https://github.com/pasangt6721-cpu" className="hover:text-white transition-colors duration-300">Github</a>
           </div>
         </div>
       </footer>

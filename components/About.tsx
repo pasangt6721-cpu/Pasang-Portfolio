@@ -17,17 +17,16 @@ export default function About() {
           className="w-full md:w-1/2 aspect-square md:aspect-[4/5] bg-zinc-900 rounded-sm overflow-hidden relative group flex items-center justify-center border border-white/5"
         >
           {/* Placeholder for future portrait image */}
-          {/* Example of how to use it later: 
           <Image
-            src="/your-portrait-image.jpg"
+            src="/PASA.png"
             alt="Pasang - Portrait"
             fill
             className="object-cover filter grayscale opacity-90 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 ease-in-out group-hover:scale-105"
           /> 
-          */}
-          <span className="text-zinc-600 font-mono text-sm tracking-widest uppercase">
+         
+          {/* <span className="text-zinc-600 font-mono text-sm tracking-widest uppercase">
             [ Portrait Placeholder ]
-          </span>
+          </span> */}
         </motion.div>
 
         {/* Right Side: Text Content */}
@@ -43,7 +42,7 @@ export default function About() {
           </h2>
           
           <p className="text-zinc-400 text-lg md:text-[22px] leading-[1.8] font-light max-w-xl">
-            With 2+ years of experience, I build engaging and efficient digital experiences from the ground up. From designing intuitive interfaces to developing robust backend systems, I turn ideas into fully functional applications that connect users and solve real problems. Every project I work on is crafted with precision, creativity, and scalability in mind.
+            I’m a beginner developer with a strong passion for building engaging and efficient digital experiences. I enjoy learning new technologies, improving my coding skills, and turning ideas into functional applications. From creating clean user interfaces to exploring backend development, I focus on writing scalable, creative, and well-structured solutions while continuously growing as a developer.
           </p>
         </motion.div>
         

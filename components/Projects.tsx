@@ -7,34 +7,34 @@ import Image from "next/image";
 const PROJECTS = [
   {
     title: "PASA Travels",
-    tech: "Bootstrap • Django • REST API • React • HTML • JavaScript",
-    desc: "A full-stack travel booking platform where users can explore destinations, view curated tours, and book trips with expert local guides. Built using Django and REST API for backend and React for a dynamic frontend, ensuring smooth performance and scalable architecture.",
-    img: "/pasa-travels-hero.jpg",
-    link: "#"
+    tech: "Bootstrap • React • HTML • JavaScript",
+    desc: "A travel booking platform where users can explore destinations, view curated tours, and book trips with expert local guides. Built using React for a dynamic frontend, ensuring smooth performance and scalable architecture.",
+    img: "/pasa-travels-ui.png",
+    link: "https://pasa-travel.netlify.app",
+    codeLink: "https://github.com/pasangt6721-cpu/pasa-travels"
   },
   {
     title: "Pasa Foods UI",
-    tech: "Bootstrap • HTML • CSS • JavaScript",
-    desc: "A modern and responsive food ordering interface designed using Bootstrap. Features clean UI components, product cards, ratings, pricing, and interactive Add to Cart buttons. Focused on user-friendly layout and visually appealing design.",
-    img: "/pasa-foods-ui.jpg",
-    link: "#",
-    codeLink: "#"
+    tech: "Bootstrap • React • HTML • CSS • JavaScript",
+    desc: "A modern and responsive food ordering interface designed using Bootstrap and React. Features clean UI components, product cards, ratings, pricing, and interactive Add to Cart buttons. Focused on user-friendly layout and visually appealing design.",
+    img: "/pasa-foods-ui.png",
+    link: "https://pasa-foods.netlify.app",
+    codeLink: "https://github.com/pasangt6721-cpu/Pasa-Foods"
   },
   {
     title: "Pasa Ecommerce UI",
     tech: "React JS • Bootstrap • HTML • CSS • JavaScript",
     desc: "A responsive ecommerce frontend built using React JS and Bootstrap. Features product listings, dynamic UI components, shopping cart interface, and smooth navigation. Designed for a clean user experience with reusable components and modern layout structure.",
-    img: "/pasa-ecommerce-ui.jpg",
-    link: "#",
-    codeLink: "#"
+    img: "/pasa-ecommerce-ui.png",
+    link: "https://pasa-ecommerces.netlify.app",
+    codeLink: "https://github.com/pasangt6721-cpu/Ecommerce-Project"
   },
   {
     title: "Pasang Portfolio",
     tech: "Next.js • React • Tailwind CSS • Framer Motion • JavaScript",
     desc: "A modern and visually stunning personal portfolio website. Showcases projects, skills, and experience with smooth scroll animations, interactive UI components, and responsive design. Built with cutting-edge web technologies for an immersive user experience.",
     img: "/pasang-portfolio.jpg",
-    link: "#",
-    codeLink: "#"
+    link: "#"
   },
 ];
 
@@ -79,11 +79,11 @@ export default function Projects() {
                 {/* Overlay Hover Details */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 transition-opacity duration-700 group-hover:opacity-100 flex items-end p-8">
                   <div className="flex gap-3 w-full">
-                    <a href={project.link} className="flex-1 bg-white/10 backdrop-blur-md px-4 py-3 rounded-sm text-sm font-medium border border-white/10 text-white text-center transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 delay-100 hover:bg-white/20">
+                    <a href={project.link} className="flex-1 bg-white/10 backdrop-blur-md px-4 py-3 rounded-sm text-sm font-medium border border-white/10 text-white text-center transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 delay-100 hover:bg-white/20" target="_blank" rel="noopener noreferrer">
                       View Project &rarr;
                     </a>
                     {project.codeLink && (
-                      <a href={project.codeLink} className="flex-1 bg-white/10 backdrop-blur-md px-4 py-3 rounded-sm text-sm font-medium border border-white/10 text-white text-center transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 delay-150 hover:bg-white/20">
+                      <a href={project.codeLink} className="flex-1 bg-white/10 backdrop-blur-md px-4 py-3 rounded-sm text-sm font-medium border border-white/10 text-white text-center transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 delay-150 hover:bg-white/20" target="_blank" rel="noopener noreferrer">
                         View Code &rarr;
                       </a>
                     )}
