@@ -169,15 +169,15 @@ export default function Contact() {
                 </option>
 
                 <option value="Short-form Video">
-                  Short-form Video
+                  UI/UX Design
                 </option>
 
                 <option value="Long-form Video">
-                  Long-form Video
+                  Frontend Development
                 </option>
 
                 <option value="Graphics Design">
-                  Graphics Design
+                  backend Development
                 </option>
               </select>
             </div>
