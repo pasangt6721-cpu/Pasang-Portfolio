@@ -30,16 +30,26 @@ export default function SkillsMarquee() {
   }, []);
 
   return (
-    <section className="relative w-full py-24 bg-[#0D0D0D] overflow-hidden flex flex-col items-center border-t border-white/5">
-      <h2 className="text-4xl md:text-5xl font-bold mb-16 px-6 text-center text-transparent bg-clip-text bg-gradient-to-r from-zinc-300 via-white to-zinc-500 tracking-tight drop-shadow-md">
+    <section className="relative w-full py-24 overflow-hidden flex flex-col items-center">
+      {/* Ambient transition gradient */}
+      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-teal-500/5 to-transparent pointer-events-none" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-[1px] bg-gradient-to-r from-transparent via-teal-400/20 to-transparent" />
+      <p className="text-[11px] font-medium tracking-[0.3em] text-teal-400 mb-4 uppercase">
+        SKILLS
+      </p>
+      <h2 className="font-black uppercase text-4xl md:text-5xl text-white tracking-tight mb-16 px-6 text-center">
         Technical Arsenal
       </h2>
 
       {/* Marquee Wrapper */}
-      <div className="relative w-full max-w-[100vw] overflow-hidden flex flex-col gap-14 md:gap-20 items-center py-4">
-        {/* Gradient Fade Masks */}
-        <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-[100px] md:w-[250px] bg-gradient-to-r from-[#0D0D0D] to-transparent"></div>
-        <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-[100px] md:w-[250px] bg-gradient-to-l from-[#0D0D0D] to-transparent"></div>
+      <div 
+        className="relative w-full max-w-[100vw] overflow-hidden flex flex-col gap-14 md:gap-20 items-center py-4"
+        style={{
+          WebkitMaskImage: "linear-gradient(to right, transparent, black 15%, black 85%, transparent)",
+          maskImage: "linear-gradient(to right, transparent, black 15%, black 85%, transparent)",
+        }}
+      >
+        {/* Gradient Fade Masks removed in favor of CSS mask-image */}
         
         {/* Animated Marquee Flex Container */}
         <style>{`
@@ -88,7 +98,7 @@ export default function SkillsMarquee() {
                   src={skill.logo}
                   alt={`${skill.name} logo`}
                   fill
-                  className="object-contain filter grayscale opacity-40 group-hover:grayscale-0 group-[.is-active]:grayscale-0 group-hover:opacity-100 group-[.is-active]:opacity-100 transition-all duration-500"
+                  className="object-contain opacity-40 group-hover:opacity-100 group-[.is-active]:opacity-100 transition-all duration-500"
                 />
               </div>
               
@@ -97,7 +107,7 @@ export default function SkillsMarquee() {
                 <span className="text-white font-medium text-base md:text-xl tracking-wide">
                   {skill.name}
                 </span>
-                <span className="text-zinc-500 text-sm md:text-base font-mono mt-1">
+                <span className="text-white/60 text-sm md:text-base font-mono mt-1">
                   {skill.percent}
                 </span>
               </div>
@@ -119,7 +129,7 @@ export default function SkillsMarquee() {
                   src={skill.logo}
                   alt={`${skill.name} logo`}
                   fill
-                  className="object-contain filter grayscale opacity-40 group-hover:grayscale-0 group-[.is-active]:grayscale-0 group-hover:opacity-100 group-[.is-active]:opacity-100 transition-all duration-500"
+                  className="object-contain opacity-40 group-hover:opacity-100 group-[.is-active]:opacity-100 transition-all duration-500"
                 />
               </div>
               
@@ -128,7 +138,7 @@ export default function SkillsMarquee() {
                 <span className="text-white font-medium text-base md:text-xl tracking-wide">
                   {skill.name}
                 </span>
-                <span className="text-zinc-500 text-sm md:text-base font-mono mt-1">
+                <span className="text-white/60 text-sm md:text-base font-mono mt-1">
                   {skill.percent}
                 </span>
               </div>

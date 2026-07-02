@@ -77,12 +77,16 @@ export default function Contact() {
         });
     };
   return (
-    <section id="contact" className="relative w-full py-40 bg-[#0D0D0D] overflow-hidden flex flex-col items-center justify-center border-t border-white/5 z-20">
+    <section id="contact" className="relative w-full py-40 overflow-hidden flex flex-col items-center justify-center z-20">
+      {/* Ambient transition gradient */}
+      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-teal-500/5 to-transparent pointer-events-none" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-[1px] bg-gradient-to-r from-transparent via-teal-400/20 to-transparent" />
       
-      {/* Subtle Background Glow/Rays matching the reference vibe but fitting the dark theme */}
-      <div className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-[1000px] h-[600px] opacity-40">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-white/10 via-[#0D0D0D]/60 to-[#0D0D0D]"></div>
-      </div>
+      {/* Ambient glow matching Hero */}
+      <div
+        className="pointer-events-none absolute left-1/2 top-0 h-[600px] w-full max-w-[1000px] -translate-x-1/2 rounded-full bg-[radial-gradient(closest-side,rgba(45,212,191,0.16),transparent_70%)] blur-2xl"
+        aria-hidden
+      />
 
       <motion.div 
         initial={{ opacity: 0, y: 40 }}

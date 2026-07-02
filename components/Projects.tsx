@@ -40,7 +40,10 @@ const PROJECTS = [
 
 export default function Projects() {
   return (
-    <section id="work" className="relative bg-[#0D0D0D] py-12 px-6 sm:px-12 z-20">
+    <section id="work" className="relative py-12 px-6 sm:px-12 z-20">
+      {/* Ambient transition gradient */}
+      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-teal-500/5 to-transparent pointer-events-none" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-[1px] bg-gradient-to-r from-transparent via-teal-400/20 to-transparent" />
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -49,10 +52,13 @@ export default function Projects() {
           viewport={{ once: true, margin: "-100px" }}
           className="flex flex-col items-center text-center max-w-3xl mx-auto mb-20"
         >
-          <h2 className="font-serif text-5xl md:text-6xl lg:text-[5rem] text-white tracking-tight mb-6 leading-[1.1]">
+          <p className="text-[11px] font-medium tracking-[0.3em] text-teal-400 mb-4 uppercase">
+            WORK
+          </p>
+          <h2 className="font-black uppercase text-5xl md:text-6xl lg:text-[5rem] text-white tracking-tight mb-6 leading-[1.1]">
             Featured Works
           </h2>
-          <p className="text-zinc-400 text-lg md:text-[22px] leading-[1.8] font-light">
+          <p className="text-white/60 text-lg md:text-[22px] leading-[1.8] font-light">
             A curated selection of digital experiences I've built.
           </p>
         </motion.div>
@@ -68,12 +74,12 @@ export default function Projects() {
               className="group cursor-pointer flex flex-col gap-8"
             >
               {/* Image Container with matching layout */}
-              <div className="relative overflow-hidden rounded-sm aspect-[4/3] bg-zinc-900 border border-white/5 transition-all duration-700">
+              <div className="relative overflow-hidden rounded-sm aspect-[4/3] bg-white/5 backdrop-blur-sm border border-white/10 transition-all duration-700">
                 <Image
                   src={project.img}
                   alt={project.title}
                   fill
-                  className="object-cover filter grayscale opacity-90 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-105"
+                  className="object-cover opacity-90 group-hover:opacity-100 transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-105"
                 />
                 
                 {/* Overlay Hover Details */}
@@ -93,7 +99,7 @@ export default function Projects() {
 
               {/* Text Meta Container matching the typography of About US */}
               <div className="flex flex-col gap-4 relative px-2">
-                <h4 className="font-serif text-3xl md:text-4xl text-white group-hover:text-zinc-300 transition-colors tracking-wide">
+                <h4 className="font-black uppercase text-2xl md:text-3xl text-white group-hover:text-teal-300 transition-colors tracking-wide">
                   {project.title}
                 </h4>
                 
@@ -101,14 +107,14 @@ export default function Projects() {
                   {project.tech.split(" • ").map((tag, i) => (
                     <span 
                       key={i} 
-                      className="text-[10px] md:text-[11px] font-mono tracking-widest text-[#FF6A2A] uppercase border border-[#FF6A2A]/30 bg-[#FF6A2A]/10 px-3 py-1.5 rounded-full"
+                      className="text-[10px] md:text-[11px] font-mono tracking-widest text-teal-400 uppercase border border-teal-400/30 bg-teal-400/10 px-3 py-1.5 rounded-full"
                     >
                       {tag}
                     </span>
                   ))}
                 </div>
                 
-                <p className="text-zinc-400 text-base md:text-lg leading-[1.8] font-light max-w-lg mt-2">
+                <p className="text-white/60 text-base md:text-lg leading-[1.8] font-light max-w-lg mt-2">
                   {project.desc}
                 </p>
               </div>

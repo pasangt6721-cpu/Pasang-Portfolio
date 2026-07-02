@@ -44,14 +44,14 @@ export default function Navbar() {
       <nav
         className={cn(
           "fixed top-0 inset-x-0 z-50 transition-all duration-500 ease-in-out py-6 md:py-8 px-6 md:px-12",
-          scrolled && "bg-black/60 backdrop-blur-xl border-b border-white/5 py-4 md:py-5 shadow-2xl"
+          scrolled && "bg-[#050a10]/80 backdrop-blur-xl border-b border-white/5 py-4 md:py-5 shadow-2xl"
         )}
       >
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           {/* Logo */}
           <div 
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="text-white font-serif italic text-xl md:text-2xl tracking-wide hover:scale-105 transition-transform cursor-pointer drop-shadow-md z-50"
+            className="text-white font-black uppercase text-xl md:text-2xl tracking-widest hover:scale-105 transition-transform cursor-pointer drop-shadow-md z-50"
           >
             Pasang.
           </div>
@@ -63,10 +63,10 @@ export default function Navbar() {
                 key={item.name}
                 href={item.href}
                 onClick={(e) => handleNavClick(e, item.href)}
-                className="text-zinc-400 hover:text-white transition-colors duration-300 relative group"
+                className="text-white/60 hover:text-white transition-colors duration-300 relative group"
               >
                 {item.name}
-                <span className="absolute left-0 -bottom-1 w-0 h-[1px] bg-white transition-all duration-300 group-hover:w-full" />
+                <span className="absolute left-0 -bottom-1 w-0 h-[1px] bg-teal-400 transition-all duration-300 group-hover:w-full" />
               </a>
             ))}
           </div>
@@ -76,7 +76,7 @@ export default function Navbar() {
             <a 
               href="#contact" 
               onClick={(e) => handleNavClick(e, "#contact")}
-              className="bg-white text-black px-6 py-2.5 rounded-full text-sm font-bold tracking-wide hover:scale-105 hover:bg-zinc-200 transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.1)]"
+              className="bg-teal-400 text-black px-6 py-2.5 rounded-full text-sm font-bold tracking-wide hover:scale-105 hover:bg-teal-300 transition-all duration-300 shadow-[0_0_20px_rgba(45,212,191,0.2)]"
             >
               Let's Talk
             </a>
@@ -114,7 +114,7 @@ export default function Navbar() {
                   key={item.name}
                   href={item.href}
                   onClick={(e) => handleNavClick(e, item.href)}
-                  className="font-serif text-5xl text-white hover:text-zinc-400 transition-colors"
+                  className="font-black uppercase text-5xl text-white hover:text-white/60 transition-colors"
                 >
                   {item.name}
                 </motion.a>
@@ -126,7 +126,7 @@ export default function Navbar() {
                   transition={{ delay: 0.5, duration: 0.4 }}
                   href="#contact"
                   onClick={(e) => handleNavClick(e, "#contact")}
-                  className="mt-8 bg-white text-black px-10 py-4 rounded-full text-lg font-bold tracking-wide"
+                  className="mt-8 bg-teal-400 text-black px-10 py-4 rounded-full text-lg font-bold tracking-wide transition-colors hover:bg-teal-300"
               >
                 Let's Talk
               </motion.a>
