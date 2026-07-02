@@ -125,7 +125,7 @@ function DesktopHero() {
       {/* Content grid */}
       <div className="relative z-10 mx-auto flex h-full w-full max-w-[1600px] flex-col justify-between px-16 pb-6 pt-20">
         {/* Top row: left copy (vertically centered) */}
-        <div className="flex flex-1 flex-col justify-center gap-10">
+        <div className="flex flex-1 flex-col justify-center gap-10 -mt-16 md:mt-0">
           {/* Left column */}
           <motion.div
             initial="hidden"
