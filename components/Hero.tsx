@@ -125,7 +125,7 @@ function DesktopHero() {
       {/* Content grid */}
       <div className="relative z-10 mx-auto flex h-full w-full max-w-[1600px] flex-col justify-between px-16 pb-6 pt-20">
         {/* Top row: left copy (vertically centered) */}
-        <div className="flex flex-1 flex-col justify-center gap-10 -mt-16 md:mt-0">
+        <div className="flex flex-1 flex-col justify-center gap-10">
           {/* Left column */}
           <motion.div
             initial="hidden"
@@ -253,8 +253,8 @@ function DesktopHero() {
 
 function MobileHero() {
   return (
-    <section className="relative w-full h-screen overflow-hidden bg-[#050a10] text-white flex flex-col justify-end pb-8">
-      <div className="absolute inset-0 z-0 opacity-60">
+    <section className="relative w-full h-[100svh] overflow-hidden bg-transparent text-white flex flex-col pt-12 pb-4">
+      <div className="absolute inset-0 z-0 opacity-60 pointer-events-none">
         <ColorBends
           colors={["#2dd4bf", "#0f766e", "#050a10"]}
           rotation={90}
@@ -271,8 +271,19 @@ function MobileHero() {
           transparent={true}
         />
       </div>
-      {/* Background Image / Showcase - Top half */}
-      <div className="absolute inset-x-0 top-0 h-[65%] z-0 flex justify-center">
+
+      {/* DESIGNER Watermark behind content */}
+      <div className="absolute inset-x-0 top-40 flex justify-center z-0 pointer-events-none overflow-hidden opacity-5">
+        <motion.h2
+          initial="hidden" animate="show" variants={fadeUp} custom={0.5}
+          className="text-[25vw] font-black uppercase leading-none tracking-tighter text-white select-none whitespace-nowrap"
+        >
+          <TypewriterText singleLine />
+        </motion.h2>
+      </div>
+
+      {/* Image / Showcase - Top half (Relative) */}
+      <div className="relative z-0 flex-1 w-full flex justify-center pointer-events-none mt-0">
         <div className="relative w-full h-full max-w-sm">
           <Image
             src="/pasa-pp-transparent-new.png"
@@ -283,22 +294,10 @@ function MobileHero() {
             className="object-contain object-bottom"
           />
         </div>
-        {/* Gradients to fade out the bottom where content sits */}
-        <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-[#050a10] via-[#050a10]/80 to-transparent" />
-      </div>
-
-      {/* DESIGNER Watermark behind content */}
-      <div className="absolute inset-x-0 bottom-8 flex justify-center z-0 pointer-events-none overflow-hidden opacity-5">
-        <motion.h2
-          initial="hidden" animate="show" variants={fadeUp} custom={0.5}
-          className="text-[25vw] font-black uppercase leading-none tracking-tighter text-white select-none whitespace-nowrap"
-        >
-          <TypewriterText singleLine />
-        </motion.h2>
       </div>
 
       {/* Main Content (Bottom Heavy) */}
-      <div className="relative z-10 flex flex-col px-6 w-full mt-auto">
+      <div className="relative z-10 flex flex-col px-6 w-full pb-8 -mt-16">
         <motion.p
           custom={0}
           initial="hidden" animate="show" variants={fadeUp}
