@@ -14,8 +14,39 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Pasang | Creative Developer",
-  description: "Cinematic scrollytelling portfolio driven by Next.js and HTML5 Canvas.",
+  metadataBase: new URL("https://pasanggole.com.np"),
+  title: {
+    default: "Pasang Gole | Creative Developer",
+    template: "%s | Pasang Gole",
+  },
+  description: "Cinematic scrollytelling portfolio of Pasang Gole,Cinematic scrollytelling portfolio of Pasang Tamang,a creative developer from Nepal driven by Python, Django, and WebGL.",
+  keywords: ["Developer", "Nepal", "django", "Pasang Gole", "Pasang Tamang", "UI/UX Designer", "Frontend Developer", "Next.js", "React"],
+  authors: [{ name: "Pasang Gole" }],
+  creator: "Pasang Gole",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://pasanggole.com.np",
+    title: "Pasang Gole | Creative Developer",
+    description: "Portfolio of Pasang Gole, a creative developer from Nepal specializing in React, Next.js, and Django.",
+    siteName: "Pasang Gole Portfolio",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Pasang Gole | Creative Developer",
+    description: "Portfolio of Pasang Gole, a creative developer from Nepal.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 };
 
 export default function RootLayout({

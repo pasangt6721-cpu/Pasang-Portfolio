@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import GlareHover from "./GlareHover";
 
 export default function About() {
   return (
@@ -20,12 +21,14 @@ export default function About() {
           className="w-full md:w-1/2 aspect-square md:aspect-[4/5] bg-white/5 backdrop-blur-sm rounded-sm overflow-hidden relative group flex items-center justify-center border border-teal-400/20"
         >
           {/* Placeholder for future portrait image */}
-          <Image
-            src="/PASA.png"
-            alt="Pasang - Portrait"
-            fill
-            className="object-cover opacity-90 group-hover:opacity-100 transition-all duration-700 ease-in-out group-hover:scale-105"
-          /> 
+          <GlareHover glareColor="#2dd4bf" transitionDuration={700}>
+            <Image
+              src="/PASA.png"
+              alt="Pasang Gole (Pasang Tamang) - Creative Web Developer and UI Designer"
+              fill
+              className="object-cover opacity-90 group-hover:opacity-100 transition-all duration-700 ease-in-out group-hover:scale-105"
+            /> 
+          </GlareHover>
          
           {/* <span className="text-zinc-600 font-mono text-sm tracking-widest uppercase">
             [ Portrait Placeholder ]
@@ -44,7 +47,7 @@ export default function About() {
             WHO I AM
           </p>
           <h2 className="font-black uppercase text-5xl md:text-6xl lg:text-[4.5rem] xl:text-[5rem] text-white tracking-tight mb-8 md:mb-10 leading-[1.1]">
-            I build digital worlds
+            I'm Pasang Gole
           </h2>
           
           <p className="text-white/60 text-lg md:text-[22px] leading-[1.8] font-light max-w-xl">

@@ -287,7 +287,7 @@ function MobileHero() {
         <div className="relative w-full h-full max-w-sm">
           <Image
             src="/pasa-pp-transparent-new.png"
-            alt="Portrait"
+            alt="Pasang Gole - UI/UX Designer and Frontend Developer Portrait"
             fill
             priority
             sizes="100vw"

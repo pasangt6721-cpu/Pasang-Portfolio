@@ -1,12 +1,13 @@
 "use client";
 
 import { motion } from "framer-motion";
+import CountUp from "./CountUp";
 
 export default function FeaturedStats() {
   const stats = [
-    { number: "10+", label: "Projects Completed" },
-    { number: "3+", label: "Clients Helped" },
-    { number: "98%", label: "Satisfaction" },
+    { number: 10, suffix: "+", label: "Projects Completed" },
+    { number: 3, suffix: "+", label: "Clients Helped" },
+    { number: 98, suffix: "%", label: "Satisfaction" },
   ];
 
   return (
@@ -26,8 +27,9 @@ export default function FeaturedStats() {
               viewport={{ once: true, margin: "-100px" }}
               className="flex flex-col items-center md:items-start w-full md:w-auto text-center md:text-left group"
             >
-              <h4 className="text-[5rem] lg:text-[7rem] font-black leading-none bg-gradient-to-r from-white to-white/40 bg-clip-text text-transparent tracking-tighter mb-4 transition-transform duration-700 group-hover:scale-105 group-hover:from-white group-hover:to-white/80">
-                {stat.number}
+              <h4 className="flex items-center text-[5rem] lg:text-[7rem] font-black leading-none bg-gradient-to-r from-white to-white/40 bg-clip-text text-transparent tracking-tighter mb-4 transition-transform duration-700 group-hover:scale-105 group-hover:from-white group-hover:to-white/80">
+                <CountUp to={stat.number} duration={2} className="inline-block" />
+                <span>{stat.suffix}</span>
               </h4>
               <div className="h-[2px] w-12 bg-gradient-to-r from-teal-400 to-teal-700 mb-5 opacity-70 transition-all duration-700 group-hover:w-full group-hover:opacity-100" />
               <p className="text-zinc-500 text-lg uppercase tracking-widest font-medium group-hover:text-teal-300 transition-colors duration-700">

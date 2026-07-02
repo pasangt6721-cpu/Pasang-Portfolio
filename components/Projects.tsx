@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import GlareHover from "./GlareHover";
 
 // TEMPLATE: You can easily update these objects later once your projects are ready!
 const PROJECTS = [
@@ -74,26 +75,28 @@ export default function Projects() {
             >
               {/* Image Container with matching layout */}
               <div className="relative overflow-hidden rounded-sm aspect-[4/3] bg-white/5 backdrop-blur-sm border border-white/10 transition-all duration-700">
-                <Image
-                  src={project.img}
-                  alt={project.title}
-                  fill
-                  className="object-cover opacity-90 group-hover:opacity-100 transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-105"
-                />
-                
-                {/* Overlay Hover Details */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 transition-opacity duration-700 group-hover:opacity-100 flex items-end p-8">
-                  <div className="flex gap-3 w-full">
-                    <a href={project.link} className="flex-1 bg-white/10 backdrop-blur-md px-4 py-3 rounded-sm text-sm font-medium border border-white/10 text-white text-center transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 delay-100 hover:bg-white/20" target="_blank" rel="noopener noreferrer">
-                      View Project &rarr;
-                    </a>
-                    {project.codeLink && (
-                      <a href={project.codeLink} className="flex-1 bg-white/10 backdrop-blur-md px-4 py-3 rounded-sm text-sm font-medium border border-white/10 text-white text-center transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 delay-150 hover:bg-white/20" target="_blank" rel="noopener noreferrer">
-                        View Code &rarr;
+                <GlareHover glareColor="#2dd4bf" transitionDuration={700}>
+                  <Image
+                    src={project.img}
+                    alt={project.title}
+                    fill
+                    className="object-cover opacity-90 group-hover:opacity-100 transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-105"
+                  />
+                  
+                  {/* Overlay Hover Details */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 transition-opacity duration-700 group-hover:opacity-100 flex items-end p-8">
+                    <div className="flex gap-3 w-full">
+                      <a href={project.link} className="flex-1 bg-white/10 backdrop-blur-md px-4 py-3 rounded-sm text-sm font-medium border border-white/10 text-white text-center transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 delay-100 hover:bg-white/20" target="_blank" rel="noopener noreferrer">
+                        View Project &rarr;
                       </a>
-                    )}
+                      {project.codeLink && (
+                        <a href={project.codeLink} className="flex-1 bg-white/10 backdrop-blur-md px-4 py-3 rounded-sm text-sm font-medium border border-white/10 text-white text-center transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 delay-150 hover:bg-white/20" target="_blank" rel="noopener noreferrer">
+                          View Code &rarr;
+                        </a>
+                      )}
+                    </div>
                   </div>
-                </div>
+                </GlareHover>
               </div>
 
               {/* Text Meta Container matching the typography of About US */}
