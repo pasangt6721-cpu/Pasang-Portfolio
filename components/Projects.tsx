@@ -6,6 +6,20 @@ import Image from "next/image";
 // TEMPLATE: You can easily update these objects later once your projects are ready!
 const PROJECTS = [
   {
+    title: "Pasang Portfolio",
+    tech: "Next.js • React • Tailwind CSS • Framer Motion • JavaScript",
+    desc: "A modern and visually stunning personal portfolio website. Showcases projects, skills, and experience with smooth scroll animations, interactive UI components, and responsive design. Built with cutting-edge web technologies for an immersive user experience.",
+    img: "/pasa-portfolio.png",
+    link: "#"
+  },
+  {
+    title: "Benjamin Portfolio",
+    tech: "React JS • Bootstrap • HTML • CSS • JavaScript",
+    desc: "This project is a modern portfolio website for my friend.Showcasing his passion for vidoe editing and for his skills to get known to all.",
+    img: "/benjaminshrestha-portfolio.png",
+    link: "https://benjaminshrestha.com.np",
+  },
+  {
     title: "PASA Travels",
     tech: "Bootstrap • React • HTML • JavaScript",
     desc: "A travel booking platform where users can explore destinations, view curated tours, and book trips with expert local guides. Built using React for a dynamic frontend, ensuring smooth performance and scalable architecture.",
@@ -20,21 +34,6 @@ const PROJECTS = [
     img: "/pasa-foods-ui.png",
     link: "https://pasa-foods.netlify.app",
     codeLink: "https://github.com/pasangt6721-cpu/Pasa-Foods"
-  },
-  {
-    title: "Pasa Ecommerce UI",
-    tech: "React JS • Bootstrap • HTML • CSS • JavaScript",
-    desc: "A responsive ecommerce frontend built using React JS and Bootstrap. Features product listings, dynamic UI components, shopping cart interface, and smooth navigation. Designed for a clean user experience with reusable components and modern layout structure.",
-    img: "/pasa-ecommerce-ui.png",
-    link: "https://pasa-ecommerces.netlify.app",
-    codeLink: "https://github.com/pasangt6721-cpu/Ecommerce-Project"
-  },
-  {
-    title: "Pasang Portfolio",
-    tech: "Next.js • React • Tailwind CSS • Framer Motion • JavaScript",
-    desc: "A modern and visually stunning personal portfolio website. Showcases projects, skills, and experience with smooth scroll animations, interactive UI components, and responsive design. Built with cutting-edge web technologies for an immersive user experience.",
-    img: "/pasang-portfolio.jpg",
-    link: "#"
   },
 ];
 
