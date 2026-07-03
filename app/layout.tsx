@@ -50,6 +50,10 @@ export const metadata: Metadata = {
   verification: {
     google: "rSrZooNu1m1tCZdl3Nu6NgQsi2dem3PIP91qnA6x3Bg",
   },
+  icons: {
+    icon: "/logos/pasa-favicon.png",
+    apple: "/logos/pasa-favicon.png",
+  },
 };
 
 export default function RootLayout({
