@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     template: "%s | Pasang Gole",
   },
   description: "Cinematic scrollytelling portfolio of Pasang Gole,Cinematic scrollytelling portfolio of Pasang Tamang,a creative developer from Nepal driven by Python, Django, and WebGL.",
-  keywords: ["Developer", "Nepal", "django", "Pasang Gole", "Pasang Tamang", "UI/UX Designer", "Frontend Developer", "Next.js", "React"],
+  keywords: ["Pasang Tamang", "Pasang Gole", "Frontend Developer", "UI/UX Designer", "Developer", "Nepal", "django", "Next.js", "React"],
   authors: [{ name: "Pasang Gole" }],
   creator: "Pasang Gole",
   openGraph: {
