@@ -46,7 +46,7 @@ export default function About() {
           <p className="text-[11px] font-medium tracking-[0.3em] text-teal-400 mb-4 uppercase">
             WHO I AM
           </p>
-          <h2 className="font-black uppercase text-5xl md:text-6xl lg:text-[4.5rem] xl:text-[5rem] text-white tracking-tight mb-8 md:mb-10 leading-[1.1]">
+          <h2 className="font-black uppercase text-4xl md:text-4xl lg:text-5xl xl:text-[3.2rem] text-white tracking-tight mb-8 md:mb-10 leading-[1.1]">
             I'm Pasang Gole
           </h2>
           

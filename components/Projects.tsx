@@ -5,7 +5,16 @@ import Image from "next/image";
 import GlareHover from "./GlareHover";
 
 // TEMPLATE: You can easily update these objects later once your projects are ready!
-const PROJECTS = [
+type Project = {
+  title: string;
+  tech: string;
+  desc: string;
+  img: string;
+  link: string;
+  codeLink?: string;
+};
+
+const PROJECTS: Project[] = [
   {
     title: "Pasang Portfolio",
     tech: "Next.js • React • Tailwind CSS • Framer Motion • JavaScript",
@@ -21,20 +30,18 @@ const PROJECTS = [
     link: "https://benjaminshrestha.com.np",
   },
   {
-    title: "PASA Travels",
-    tech: "Bootstrap • React • HTML • JavaScript",
-    desc: "A travel booking platform where users can explore destinations, view curated tours, and book trips with expert local guides. Built using React for a dynamic frontend, ensuring smooth performance and scalable architecture.",
-    img: "/pasa-travels-ui.png",
-    link: "https://pasa-travel.netlify.app",
-    codeLink: "https://github.com/pasangt6721-cpu/pasa-travels"
+    title: "PASA Fitness Tracker",
+    tech: "React • Django REST Framework • PostgreSQL • Bootstrap • Chart.js",
+    desc: "A full-stack fitness tracking application that helps users monitor daily calorie intake, workouts, BMI, water consumption, and weight progress. Features secure authentication, food and activity management, progress charts, and personalized health analytics through a responsive React frontend and Django REST API backend.",
+    img: "/pasa-fitness.png",
+    link: "https://pasa-fitness.vercel.app"
   },
   {
-    title: "Pasa Foods UI",
-    tech: "Bootstrap • React • HTML • CSS • JavaScript",
-    desc: "A modern and responsive food ordering interface designed using Bootstrap and React. Features clean UI components, product cards, ratings, pricing, and interactive Add to Cart buttons. Focused on user-friendly layout and visually appealing design.",
-    img: "/pasa-foods-ui.png",
-    link: "https://pasa-foods.netlify.app",
-    codeLink: "https://github.com/pasangt6721-cpu/Pasa-Foods"
+    title: "PASA FullTech Ecommerce",
+    tech: "React • Django REST Framework • PostgreSQL • Bootstrap • JWT Authentication",
+    desc: "A full-stack ecommerce platform built with React and Django REST Framework, featuring secure JWT authentication, product browsing, category and brand management, shopping cart, user accounts, and a responsive modern interface. Designed with a scalable backend API and PostgreSQL database to deliver a fast, reliable online shopping experience.",
+    img: "/pasa-fulltech.png",
+    link: "https://pasa-full-tech-ecommerce.vercel.app/"
   },
 ];
 
@@ -74,13 +81,13 @@ export default function Projects() {
               className="group cursor-pointer flex flex-col gap-8"
             >
               {/* Image Container with matching layout */}
-              <div className="relative overflow-hidden rounded-sm aspect-[4/3] bg-white/5 backdrop-blur-sm border border-white/10 transition-all duration-700">
+              <div className="relative overflow-hidden rounded-sm aspect-video bg-white/5 backdrop-blur-sm border border-white/10 transition-all duration-700 flex items-center justify-center p-2">
                 <GlareHover glareColor="#2dd4bf" transitionDuration={700}>
                   <Image
                     src={project.img}
                     alt={project.title}
                     fill
-                    className="object-cover opacity-90 group-hover:opacity-100 transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-105"
+                    className="object-contain opacity-90 group-hover:opacity-100 transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-105"
                   />
                   
                   {/* Overlay Hover Details */}

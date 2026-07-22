@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import ColorBends from "./ColorBends";
 import { motion } from "framer-motion";
 import { FaInstagram, FaFacebookF, FaLinkedinIn, FaGithub } from "react-icons/fa";
 
@@ -255,21 +254,7 @@ function MobileHero() {
   return (
     <section className="relative w-full h-[100svh] overflow-hidden bg-transparent text-white flex flex-col pt-12 pb-4">
       <div className="absolute inset-0 z-0 opacity-60 pointer-events-none">
-        <ColorBends
-          colors={["#2dd4bf", "#0f766e", "#050a10"]}
-          rotation={90}
-          speed={0.2}
-          scale={1.2}
-          frequency={1}
-          warpStrength={1}
-          mouseInfluence={0}
-          noise={0.15}
-          parallax={0}
-          iterations={2}
-          intensity={1.5}
-          bandWidth={6}
-          transparent={true}
-        />
+        {/* ColorBends background is now globally managed in app/layout.tsx to improve performance */}
       </div>
 
       {/* DESIGNER Watermark behind content */}
